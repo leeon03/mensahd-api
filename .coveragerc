@@ -1,0 +1,25 @@
+[run]
+source =
+    eppelheim/
+    heidelberg/
+    mannheim/
+    stuttgart/
+    ulm/
+omit =
+    */virtualenv/*
+    */pyopenmensa/*
+    */mannheim/old/*
+    */mannheim/list.py
+    */stuttgart/stuttgart_old_2018/*
+    */stuttgart/stuttgart_old_2020/*
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    if self\.debug
+    if settings\.DEBUG
+    raise AssertionError
+    raise NotImplementedError
+    if 0:
+    if __name__ == .__main__.:

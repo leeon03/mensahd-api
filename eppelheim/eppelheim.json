@@ -1,0 +1,17 @@
+{
+  "mensen": [
+    {
+      "xml": "dhbw",
+      "name": "Mannheim Eppelheim, Mensa DHBW",
+      "strasse": "Handelsstra\u00DFe 13",
+      "plz": "69214",
+      "ort": "Eppelheim",
+      "latitude": 49.4080240,
+      "longitude": 8.6266422,
+      "phone": "+49 621 41050",
+      "infokurz": "Mo - Fr 12.00 - 13.30 Uhr",
+      "source": "https://www.stw-ma.de/essen-trinken/speiseplaene/speisenausgabe-eppelheim/"
+    }
+    
+  ]
+}

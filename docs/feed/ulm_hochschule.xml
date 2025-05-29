@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="https://cdn.jsdelivr.net/npm/om-style@1.0.0/basic.css" type="text/css"?>
+<?xml-stylesheet href="https://cdn.jsdelivr.net/npm/om-style@1.0.0/lightgreen.css" type="text/css"?>
+<openmensa version="2.1" xmlns="http://openmensa.org/open-mensa-v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openmensa.org/open-mensa-v2 http://openmensa.org/open-mensa-v2.xsd">
+  <canteen>
+    <day date="2025-05-26">
+      <category name="Prima Klima">
+        <meal>
+          <name>Kabuli Palau - Reis mit vega- nem Hähnchen und Minz Dip</name>
+          <note>25Mn</note>
+          <note>603</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>Senf</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.20</price>
+        </meal>
+      </category>
+      <category name="Topf Und Pfanne">
+        <meal>
+          <name>Spinat-Käsespätzle mit geschmälzten Zwiebeln</name>
+          <note>1.168</note>
+          <note>34W</note>
+          <note>CO</note>
+          <note>Ei</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.05</price>
+        </meal>
+      </category>
+      <category name="Fleisch Und Fisch">
+        <meal>
+          <name>Köttbullar - schwedische Fleischbällchen mit Rahmsoße hausgemachtem Kartoffel- püree Preiselbeeren</name>
+          <note>1.303</note>
+          <note>34W</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">5.00</price>
+        </meal>
+      </category>
+      <category name="Sattmacher">
+        <meal>
+          <name>Zartweizen mit Zucchinirahmsoße</name>
+          <note>121</note>
+          <note>34W</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>Soja</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">2.20</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2025-05-27">
+      <category name="Prima Klima">
+        <meal>
+          <name>Gnocchi in Gemüse-Käse-Soße</name>
+          <note>34W</note>
+          <note>756</note>
+          <note>CO</note>
+          <note>Farbstoff</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.20</price>
+        </meal>
+      </category>
+      <category name="Topf Und Pfanne">
+        <meal>
+          <name>Spirelli mit Paprika-Frischkäsesoße</name>
+          <note>34W</note>
+          <note>711</note>
+          <note>CO</note>
+          <note>Farbstoff</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">3.60</price>
+        </meal>
+      </category>
+      <category name="Fleisch Und Fisch">
+        <meal>
+          <name>Cevapcici auf Djuwetschreis mit Ajvar</name>
+          <note>1.023</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.80</price>
+        </meal>
+      </category>
+      <category name="Sattmacher">
+        <meal>
+          <name>Bulgur Kokos-Currysoße</name>
+          <note>233</note>
+          <note>34W</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>Soja</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">2.20</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2025-05-28">
+      <category name="Prima Klima">
+        <meal>
+          <name>Paella mit veganem Hähnchen, Reis, Erbsen, Paprika und getrockneten Tomaten</name>
+          <note>309</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.20</price>
+        </meal>
+      </category>
+      <category name="Topf Und Pfanne">
+        <meal>
+          <name>Sommerliches Kartoffel- gratin mit Tomaten, Mozzarella und Basilikum-Pesto</name>
+          <note>624</note>
+          <note>CO</note>
+          <note>Ei</note>
+          <note>Geschmacksverstärker</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">3.80</price>
+        </meal>
+      </category>
+      <category name="Fleisch Und Fisch">
+        <meal>
+          <name>Putenrahmgeschnetzeltes in bunter Pfefferrahmsoße Knöpflespätzle</name>
+          <note>1.345</note>
+          <note>34W</note>
+          <note>CO</note>
+          <note>Ei</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.75</price>
+        </meal>
+      </category>
+      <category name="Sattmacher">
+        <meal>
+          <name>Kartoffelpüree mit Kräuterrahm</name>
+          <note>34H</note>
+          <note>99</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">2.05</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2025-05-29">
+      <closed/>
+    </day>
+    <day date="2025-05-30">
+      <category name="Prima Klima">
+        <meal>
+          <name>Mie-Nudeln in einer pikanten Karottensauce</name>
+          <note>25C</note>
+          <note>34W</note>
+          <note>615</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>Sesamsamen</note>
+          <note>Soja</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.30</price>
+        </meal>
+      </category>
+      <category name="Topf Und Pfanne">
+        <meal>
+          <name>Buntes Kartoffelgulasch mit Ratatouille</name>
+          <note>174</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">3.60</price>
+        </meal>
+      </category>
+      <category name="Fleisch Und Fisch">
+        <meal>
+          <name>Hähnchenschnitzel im Knuspermantel mit Paprikasoße Kartoffelwedges</name>
+          <note>1.107</note>
+          <note>34W</note>
+          <note>Antioxidationsmittel</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.90</price>
+        </meal>
+      </category>
+      <category name="Sattmacher">
+        <meal>
+          <name>Spätzle mit Rahmsoße</name>
+          <note>34H</note>
+          <note>34W</note>
+          <note>642</note>
+          <note>CO</note>
+          <note>Ei</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">2.05</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2025-06-02">
+      <category name="Prima Klima">
+        <meal>
+          <name>Spätzles-Auflauf mit Gemüse und Käse überbacken</name>
+          <note>34W</note>
+          <note>702</note>
+          <note>CO</note>
+          <note>Ei</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.70</price>
+        </meal>
+      </category>
+      <category name="Topf Und Pfanne">
+        <meal>
+          <name>Linguine-Pfanne mit Blatt- spinat, Kirschtomaten und Käse</name>
+          <note>34W</note>
+          <note>655</note>
+          <note>CO</note>
+          <note>Farbstoff</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">3.50</price>
+        </meal>
+      </category>
+      <category name="Fleisch Und Fisch">
+        <meal>
+          <name>Laksa Chili Soup mit Pute, Chinakohl, Paprika und Kokosmilch</name>
+          <note>1.053</note>
+          <note>34W</note>
+          <note>CO</note>
+          <note>Ei</note>
+          <note>Fisch</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.75</price>
+        </meal>
+      </category>
+      <category name="Sattmacher">
+        <meal>
+          <name>Zartweizen mit Gemüse</name>
+          <note>297</note>
+          <note>34W</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>Soja</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">2.20</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2025-06-03">
+      <category name="Prima Klima">
+        <meal>
+          <name>Bibimbap-Bowl - Reis- gericht mit Gemüse und Soja- hack</name>
+          <note>34G</note>
+          <note>34W</note>
+          <note>410</note>
+          <note>CO</note>
+          <note>Erdnuss</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>Sesamsamen</note>
+          <note>Soja</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.20</price>
+        </meal>
+      </category>
+      <category name="Topf Und Pfanne">
+        <meal>
+          <name>Kartoffelgratin mit Lauch und Champignons</name>
+          <note>779</note>
+          <note>Antioxidationsmittel</note>
+          <note>CO</note>
+          <note>Ei</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">3.80</price>
+        </meal>
+      </category>
+      <category name="Fleisch Und Fisch">
+        <meal>
+          <name>Spaghetti Bologneser Art vom Rind Reibekäse</name>
+          <note>1.246</note>
+          <note>34W</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>Sellerie</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.25</price>
+        </meal>
+      </category>
+      <category name="Sattmacher">
+        <meal>
+          <name>Nudeln mit Paprika-Tomatenrahm</name>
+          <note>251</note>
+          <note>34W</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>Soja</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">2.20</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2025-06-04">
+      <category name="Prima Klima">
+        <meal>
+          <name>Kuru Fasulye Türkischer Bohnen-Eintopf mit Baguette</name>
+          <note>34G</note>
+          <note>34W</note>
+          <note>564</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.00</price>
+        </meal>
+      </category>
+      <category name="Topf Und Pfanne">
+        <meal>
+          <name>Orientalische Gemüse- pfanne mit Zartweizen</name>
+          <note>295</note>
+          <note>34W</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>Sesamsamen</note>
+          <note>Soja</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">3.70</price>
+        </meal>
+      </category>
+      <category name="Fleisch Und Fisch">
+        <meal>
+          <name>Hähnchenschnitzel im Knusperkürbismantel mit Frankfurter Grüner Soße Kartoffelbällchen</name>
+          <note>1.299</note>
+          <note>34W</note>
+          <note>Antioxidationsmittel</note>
+          <note>CO</note>
+          <note>Ei</note>
+          <note>Farbstoff</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">5.05</price>
+        </meal>
+      </category>
+      <category name="Sattmacher">
+        <meal>
+          <name>Röstzwiebel-- Kartoffelpüree mit Bratensoße</name>
+          <note>249</note>
+          <note>34W</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">2.05</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2025-06-05">
+      <category name="Prima Klima">
+        <meal>
+          <name>Tikka Masala mit veganem Curry-Hähnchen Fladenbrot</name>
+          <note>34W</note>
+          <note>371</note>
+          <note>Antioxidationsmittel</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>Sesamsamen</note>
+          <note>Soja</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.70</price>
+        </meal>
+      </category>
+      <category name="Topf Und Pfanne">
+        <meal>
+          <name>Cannelloni Verde in Tomatensoße mit Mozzarella überbacken</name>
+          <note>34W</note>
+          <note>697</note>
+          <note>CO</note>
+          <note>Ei</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.10</price>
+        </meal>
+      </category>
+      <category name="Fleisch Und Fisch">
+        <meal>
+          <name>Rotes Thai Curry mit Rind- fleischstreifen auf Basmatireis</name>
+          <note>3.040</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Krebstieren</note>
+          <note>Portion</note>
+          <note>Soja</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.75</price>
+        </meal>
+      </category>
+      <category name="Sattmacher">
+        <meal>
+          <name>Risi Bisi mit Kräutersoße</name>
+          <note>410</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">2.05</price>
+        </meal>
+      </category>
+    </day>
+    <day date="2025-06-06">
+      <category name="Prima Klima">
+        <meal>
+          <name>Jambalaya - herzhaftes Reis- gericht aus der kreolischen Küche</name>
+          <note>541</note>
+          <note>Antioxidationsmittel</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>Sellerie</note>
+          <note>Soja</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.00</price>
+        </meal>
+      </category>
+      <category name="Topf Und Pfanne">
+        <meal>
+          <name>Kartoffel-Gemüse-Pfanne mit Hirtenkäse</name>
+          <note>695</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Milch/Milchprodukte</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">3.65</price>
+        </meal>
+      </category>
+      <category name="Fleisch Und Fisch">
+        <meal>
+          <name>Schweineschnitzel mit Bratensoße frittierte Kartoffelscheiben</name>
+          <note>2.230</note>
+          <note>34W</note>
+          <note>Antioxidationsmittel</note>
+          <note>CO</note>
+          <note>Ei</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">4.90</price>
+        </meal>
+      </category>
+      <category name="Sattmacher">
+        <meal>
+          <name>Nudeln mit Tomaten- sugo</name>
+          <note>349</note>
+          <note>34W</note>
+          <note>CO</note>
+          <note>Konservierungsstoff</note>
+          <note>Portion</note>
+          <note>g</note>
+          <note>pro</note>
+          <price role="student">2.20</price>
+        </meal>
+      </category>
+    </day>
+  </canteen>
+</openmensa>

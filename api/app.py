@@ -50,5 +50,8 @@ def get_mensa_data():
 
     return jsonify(result)
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)
+
+

@@ -6,10 +6,10 @@ app = Flask(__name__)
 
 @app.route('/api/mensa')
 def get_mensa_data():
-    # Starte den Parser für Mannheim
-    subprocess.run(["python", "updateFeeds.py", "mannheim"])
+    # Nur die gewünschten Locations abrufen
+    for location in ["metropol", "greenes"]:
+        subprocess.run(["python", "updateFeeds.py", "mannheim", location])
 
-    # Lade die erzeugte XML-Datei
     xml_path = os.path.join("out", "mannheim", "dhbw-mensa.xml")
     if not os.path.exists(xml_path):
         return jsonify({"error": "Speiseplan nicht gefunden"}), 404
@@ -18,6 +18,7 @@ def get_mensa_data():
         xml_data = f.read()
 
     return xml_data, 200, {'Content-Type': 'application/xml'}
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

@@ -17,11 +17,14 @@ def get_combined_data():
         for url in urls:
             xml = requests.get(url).text
             if xml.startswith('<?xml'):
-                xml = xml.split('\n', 1)[1]  # entferne erste Zeile
+                xml = xml.split('\n', 1)[1]  # erste Zeile (<?xml...>) entfernen
             contents.append(xml)
 
-        combined = '<?xml version="1.0" encoding="UTF-8"?>\n' + "\n".join(contents)
+        # Jetzt korrekt umschließen
+        combined = '<?xml version="1.0" encoding="UTF-8"?>\n<feeds>\n' + "\n".join(contents) + '\n</feeds>'
+
         return Response(combined, mimetype="application/xml")
+
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

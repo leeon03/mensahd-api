@@ -1,25 +1,23 @@
-from flask import Flask, jsonify
-import subprocess
-import os
+from flask import Flask, Response, jsonify
+import requests
 
 app = Flask(__name__)
 
 @app.route('/api/mensa')
-def get_mensa_data():
-    # Nur die gewünschten Locations abrufen
-    for location in ["metropol", "greenes"]:
-        subprocess.run(["python", "updateFeeds.py", "mannheim", location])
+def get_combined_data():
+    urls = [
+        "https://cvzi.github.io/mensahd/meta/mannheim_metropol.xml",
+        "https://cvzi.github.io/mensahd/meta/mannheim_greenes.xml"
+    ]
 
-    xml_path = os.path.join("mannheim", "dhbw-mensa.xml")
-    if not os.path.exists(xml_path):
-        return jsonify({"error": "Speiseplan nicht gefunden"}), 404
-
-    with open(xml_path, encoding="utf-8") as f:
-        xml_data = f.read()
-
-    return xml_data, 200, {'Content-Type': 'application/xml'}
-
+    try:
+        contents = [requests.get(url).text for url in urls]
+        combined = "\n".join(contents)
+        return Response(combined, mimetype="application/xml")
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
+    import os
     port = int(os.environ.get("PORT", 5000))
-    app.run(debug=False, host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port)

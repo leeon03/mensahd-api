@@ -10,7 +10,7 @@ def get_mensa_data():
     for location in ["metropol", "greenes"]:
         subprocess.run(["python", "updateFeeds.py", "mannheim", location])
 
-    xml_path = os.path.join("out", "mannheim", "dhbw-mensa.xml")
+    xml_path = os.path.join("mannheim", "dhbw-mensa.xml")
     if not os.path.exists(xml_path):
         return jsonify({"error": "Speiseplan nicht gefunden"}), 404
 

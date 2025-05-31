@@ -35,18 +35,13 @@ class Parser:
 
     day_regex = re.compile(r'(?P<date>\d{2}\.\d{2}\.\d{4})')
     removeextras_regex = re.compile(r'\s+\[(\w,?)+\]')
-    price_regex = re.compile(
-        'Bedienstete \\+ (?P<employee>\\d+)\\%, Gäste \\+ (?P<guest>\\d+)\\%')
+    price_regex = re.compile('Bedienstete \\+ (?P<employee>\\d+)\\%, Gäste \\+ (?P<guest>\\d+)\\%')
     euro_regex = re.compile(r'(\d+,\d+) €')
     whitespace = re.compile(r'\s+')
-    weekdays = [
-        "Montag", "Dienstag", "Mittwoch", "Donnerstag",
-        "Freitag", "Samstag", "Sonntag"
-    ]
+    weekdays = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"]
     roles = ('student', 'employee', 'other')
 
     def feed(self, ref: str, days: int = 21) -> str:
-        """Generate an OpenMensa XML feed for multiple future days"""
         if ref not in self.canteens:
             return f"Unknown canteen with ref='{xml_escape(ref)}'"
 
@@ -57,7 +52,7 @@ class Parser:
 
         for offset in range(days):
             day = now_local().date() + datetime.timedelta(days=offset)
-            if day.weekday() == 6:  # Sonntag überspringen
+            if day.weekday() == 6:
                 continue
 
             url = self.source_url + self.source_parameters.format(
@@ -133,22 +128,22 @@ class Parser:
                         date += datetime.timedelta(days=1)
                         i += 1
                     if i > 7:
-                        logging.error("Date could not be calculated from %r" % (weekday,))
+                        logging.error(f"Date could not be calculated from {weekday!r}")
                     date = date.date()
 
-                    if len(previous.find_all("td")) < 2 or "geschlossen" == previous.find_all("td")[1].text.strip():
+                    if len(previous.find_all("td")) < 2 or "geschlossen" in previous.find_all("td")[1].text.strip().lower():
                         closed = date
 
                     cat = 0
                     for td0, td1 in zip(previous.find_all("td")[1:], tr.find_all("td")):
-                        if "heute kein Angebot" in td0.text or "geschlossen" in td0.text:
+                        raw_text = td0.get_text(separator=" ", strip=True)
+                        if "kein angebot" in raw_text.lower() or "geschlossen" in raw_text.lower():
                             cat += 1
                             continue
 
                         notes = set()
                         if td0.find("h2"):
-                            categoryName = canteenCategories[cat] + " " + \
-                                self.correct_capitalization(td0.find("h2").text.strip())
+                            categoryName = canteenCategories[cat] + " " + self.correct_capitalization(td0.find("h2").text.strip())
                         else:
                             categoryName = canteenCategories[cat]
 
@@ -177,8 +172,9 @@ class Parser:
                             if keep:
                                 sup.append("%s" % (",".join(keep),))
 
-                        name = self.whitespace.sub(" ", td0.text).strip().replace(" ,", ",")
-                        if not name:
+                        name = self.whitespace.sub(" ", raw_text).strip().replace(" ,", ",")
+                        if not name or name.lower() in ["", "geschlossen", "kein angebot"]:
+                            logging.warning(f"Übersprungene Zeile ohne Namen: '{td0}'")
                             cat += 1
                             continue
 
@@ -199,8 +195,8 @@ class Parser:
                         cat += 1
 
                     previous = None
-                if not mealsFound and closed:
-                    canteen.setDayClosed(closed)
+                    if not mealsFound and closed:
+                        canteen.setDayClosed(closed)
 
         return canteen.toXMLFeed()
 
@@ -221,7 +217,6 @@ class Parser:
 
         if "phone" in mensa:
             data["phone"] = xml_str_param(mensa["phone"])
-
         if "times" in mensa:
             data["times"] = mensa["times"]
 

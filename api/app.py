@@ -1,22 +1,29 @@
-from flask import Flask, jsonify
-import requests
+from flask import Flask, jsonify, request
+from mannheim import getParser  # Passe den Import an deinen Modulnamen an
 import xmltodict
+import logging
 
 app = Flask(__name__)
+parser = getParser("http://localhost:8080/{metaOrFeed}/{mensaReference}.xml")
 
-@app.route('/api/mensa')
-def get_mensa_data():
-    url = "https://cvzi.github.io/mensahd/feed/mannheim_metropol.xml"
-    xml = requests.get(url).text
+@app.route('/api/mensa/<ref>')
+def get_mensa_data(ref):
+    # Anzahl Tage per URL-Parameter, z.B. /api/mensa/schloss?days=30
+    try:
+        days = int(request.args.get('days', 21))
+    except ValueError:
+        days = 21
+
+    # Feed generieren
+    xml = parser.feed(ref, days)
     data = xmltodict.parse(xml)
 
-    days = data.get('openmensa', {}).get('canteen', {}).get('day', [])
-    if not isinstance(days, list):
-        days = [days]  # Wenn nur ein Tag vorhanden ist
+    days_data = data.get('openmensa', {}).get('canteen', {}).get('day', [])
+    if not isinstance(days_data, list):
+        days_data = [days_data]
 
     result = []
-
-    for day in days:
+    for day in days_data:
         date = day.get('@date')
         categories = day.get('category', [])
         if not isinstance(categories, list):
@@ -51,7 +58,6 @@ def get_mensa_data():
     return jsonify(result)
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.DEBUG)
     from waitress import serve
     serve(app, host="0.0.0.0", port=8080)
-
-

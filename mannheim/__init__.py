@@ -31,6 +31,7 @@ class Parser:
     source_parameters = "?location={location}&date={year}-{month}-{day}&lang=de"
     source_parameters_meta = "?location={location}&lang=de"
 
+    # Nur diese Kategorien sind erlaubt
     allowed_categories = ["Menü 1", "Menü vegan"]
 
     def correct_capitalization(self, s): return s[0].upper() + s[1:].lower()
@@ -149,8 +150,8 @@ class Parser:
                         else:
                             categoryName = canteenCategories[cat]
 
-                        # Nur erlaubte Kategorien verarbeiten
-                        if not any(allowed.lower() in categoryName.lower() for allowed in self.allowed_categories):
+                        # ✅ Nur exakt erlaubte Kategorien
+                        if categoryName.strip().lower() not in [c.lower() for c in self.allowed_categories]:
                             cat += 1
                             continue
 

@@ -19,6 +19,8 @@ except ModuleNotFoundError:
     from util import StyledLazyBuilder, now_local, xml_escape, meta_from_xsl, xml_str_param
 
 
+# ... (alle imports und Anfang bleiben gleich)
+
 class Parser:
     canteen_json = os.path.join(os.path.dirname(__file__), "canteens.json")
     meta_xslt = os.path.join(os.path.dirname(__file__), "../meta.xsl")
@@ -30,6 +32,9 @@ class Parser:
     source_url = "https://www.stw-ma.de/essen-trinken/speiseplaene/wochenansicht"
     source_parameters = "?location={location}&date={year}-{month}-{day}&lang=de"
     source_parameters_meta = "?location={location}&lang=de"
+
+    # Nur diese Kategorien sollen erlaubt sein
+    allowed_categories = ["Menü 1", "Menü vegan"]
 
     def correct_capitalization(self, s): return s[0].upper() + s[1:].lower()
 
@@ -147,6 +152,10 @@ class Parser:
                         else:
                             categoryName = canteenCategories[cat]
 
+                        if categoryName.strip().lower() not in [c.lower() for c in self.allowed_categories]:
+                            cat += 1
+                            continue  # Kategorie überspringen
+
                         if "Kubusangebote am Themenpark" in td0.text:
                             canteen.addMeal(date, categoryName, "Kubusangebote am Themenpark", [])
                             cat += 1
@@ -244,3 +253,4 @@ if __name__ == "__main__":
     p = Parser("http://localhost/{metaOrFeed}/mannheim_{mensaReference}.xml")
     print(p.feed("schloss"))
     print(p.meta("schloss"))
+
